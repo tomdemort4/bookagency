@@ -4,6 +4,7 @@ include 'resources/QueryBuilder.php';
 include 'resources/RepositoryInterface.php';
 
 class HotelRepository implements RepositoryInterface {
+	
 	protected $queryBuilder;
 
 	public function __construct(){
@@ -18,11 +19,6 @@ class HotelRepository implements RepositoryInterface {
 
 	public function getById($params){
 		return $this->queryBuilder->query("SELECT * FROM HOTELS WHERE ID=?",$params);
-	}
-
-	public function getByNameAndId($params){
-		return $params;
-
 	}
 
 
