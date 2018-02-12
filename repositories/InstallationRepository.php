@@ -16,6 +16,7 @@ class InstallationRepository implements RepositoryInterface{
 		return $this->queryBuilder->query("SELECT * FROM INSTALLATIONS",$params);
 	}
 
+	
 	public function getById($params){
 		return $this->queryBuilder->query("SELECT * FROM INSTALLATIONS WHERE ID = ?",$params);
 	}
